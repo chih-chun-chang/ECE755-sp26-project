@@ -1,0 +1,64 @@
+flowchart TB
+    subgraph Host[Host Microcontroller]
+        direction TB
+        RP[RP2040 Host]
+        Init[1. Load Embeddings and R Matrix]
+        Post[6. Softmax, Value-Weight, Un-sort]
+        RP --- Init
+        RP --- Post
+    end
+
+    subgraph ExtMem[External SRAM]
+        direction TB
+        SRAM[(SRAM)]
+        X[Tokens L x d]
+        R[Matrix R]
+        SX[Sorted Tokens]
+        Scores[Raw QK^T Scores]
+        SRAM --- X
+        SRAM --- R
+        SRAM --- SX
+        SRAM --- Scores
+    end
+
+    subgraph ASIC[Tiny Tapeout ASIC - 2 Tiles]
+        direction TB
+        SPI[SPI Controller]
+        FSM[Top-Level Control FSM]
+        
+        subgraph S1[Stage 1: LSH Hashing]
+            MAC1[16-bit MAC]
+            Arg[Argmax Logic]
+        end
+        
+        subgraph S2[Stage 2: Bucket Sort]
+            Count[8-bit Counter Array]
+            Pref[Prefix Sum and Scatter Logic]
+        end
+        
+        subgraph S3[Stage 3: QK^T Engine]
+            MAC2[Shared 16-bit MAC Reused]
+        end
+    end
+
+    %% Data flow connections
+    Init == "Init via SPI" ==> ExtMem
+    
+    X -. "Stream X and R" .-> SPI
+    R -. "Stream X and R" .-> SPI
+    
+    SPI <--> FSM
+    FSM --> S1
+    MAC1 -->|Concat| Arg
+    Arg == "Bucket IDs" ==> S2
+    Count --> Pref
+    Pref == "Scatter Indices" ==> SPI
+    SPI -. "Write Sorted" .-> SX
+    
+    SX -. "Stream Q and K" .-> SPI
+    SPI --> S3
+    S3 == "Raw Score" ==> SPI
+    SPI -. "Write Scores" .-> Scores
+    
+    Scores == "Read via SPI" ==> Post
+    SX == "Read via SPI" ==> Post
