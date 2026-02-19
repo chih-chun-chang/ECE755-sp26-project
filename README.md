@@ -24,11 +24,11 @@ ECE755-sp26-project/
 **Week 1: Foundations & High-Level Modeling**
 
 - [x] Conduct literature review, specification, and Tiny Tapeout setup.
-- [ ] Deep-read Reformer paper and LSH theory.
+- [x] Deep-read Reformer paper and LSH theory.
 - [ ] Define all design parameters within Tiny Tapeout tile constraints.
 - [ ] Set up LibreLane 2 toolchain and Tiny Tapeout template repo.
-- [ ] Implement Python/NumPy golden reference model.
-- [ ] Create High-level block diagram/algorithmic simulation.
+- [x] Implement Python/NumPy golden reference model.
+- [x] Create High-level block diagram/algorithmic simulation.
 
 **Weeks 2–3: Initial RTL & Trial Synthesis**
 
