@@ -12,9 +12,8 @@ ECE755-sp26-project/
 |    |--- design/             # Design specs & architecture diagrams  
 |
 |--- software/                # Integration Framework  
-|    |--- emulation/          # C++/Python functional models of hardware  
+|    |--- emulation/          # Python functional models of hardware  
 |
-|--- PROGRESS.md              # Milestones, 1- or 2-week plans and their alignment with project goals  
 |--- README.md                # Summary of key objectives, including main contributors  
   
 ```
