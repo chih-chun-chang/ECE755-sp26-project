@@ -1,0 +1,24 @@
+# Yosys synthesis script - ArgMax sub-block
+# Usage: yosys -s yosys_argmax.ys
+# Produces: reports/argmax_stat.txt, reports/argmax_synth.v
+
+read_verilog -sv ../rtl/ArgMax/ArgMax.sv
+hierarchy -check -top ArgMax
+proc; opt; fsm; opt; memory; opt
+
+# Generic synthesis (cell-library independent)
+synth -top ArgMax
+
+# Map to SkyWater sky130 standard cells if liberty file exists.
+# Otherwise, stop after generic synth and emit gate-level stats.
+# Expect SKY130_LIB env var pointing to sky130_fd_sc_hd__tt_025C_1v80.lib
+# For Cadence Genus / Synopsys DC you would instead use their flows.
+tee -o reports/argmax_stat_generic.txt stat
+
+# If SKY130 provided:
+#   dfflibmap -liberty $SKY130_LIB
+#   abc -liberty $SKY130_LIB
+#   tee -o reports/argmax_stat_sky130.txt stat -liberty $SKY130_LIB
+#   write_verilog reports/argmax_synth.v
+
+write_verilog reports/argmax_synth_generic.v

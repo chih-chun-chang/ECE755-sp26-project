@@ -1,0 +1,18 @@
+{
+  "DESIGN_NAME": "ReformerTop",
+  "VERILOG_FILES": [
+    "dir::../rtl/ArgMax/ArgMax.sv",
+    "dir::../rtl/SortingUnit/SortingUnit.sv",
+    "dir::../verification/ReformerTop_reference.sv"
+  ],
+  "CLOCK_PORT": "clk",
+  "CLOCK_PERIOD": 25.0,
+  "FP_SIZING": "absolute",
+  "DIE_AREA": "0 0 160 225",
+  "FP_CORE_UTIL": 40,
+  "PL_TARGET_DENSITY": 0.55,
+  "SYNTH_STRATEGY": "AREA 0",
+  "RUN_CVC": false,
+  "MAGIC_DRC_USE_GDS": true,
+  "_comment": "2x1 TinyTapeout tile is 160 x 225 um. Adjust DIE_AREA if using a different target."
+}
