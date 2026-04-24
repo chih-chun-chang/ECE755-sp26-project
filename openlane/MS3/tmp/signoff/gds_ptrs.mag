@@ -1,0 +1,6 @@
+<< properties >>
+string FIXED_BBOX 0 0 20605 22749
+string GDS_END 1220810
+string GDS_FILE /openlane/designs/Reformer/runs/MS3/results/signoff/top.magic.gds
+string GDS_START 342690
+<< end >>

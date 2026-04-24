@@ -1,0 +1,17 @@
+%Warning-PINCONNECTEMPTY: /openlane/designs/Reformer/src/top.sv:73:10: Cell pin connected by name with empty reference: 'o_max'
+   73 |         .o_max   ( ),
+      |          ^~~~~
+                          ... For warning description see https://verilator.org/warn/PINCONNECTEMPTY?v=5.009
+                          ... Use "/* verilator lint_off PINCONNECTEMPTY */" and lint_on around source to disable this message.
+%Warning-PINCONNECTEMPTY: /openlane/designs/Reformer/src/top.sv:83:10: Cell pin connected by name with empty reference: 'o_max'
+   83 |         .o_max   ( ),
+      |          ^~~~~
+%Warning-PINCONNECTEMPTY: /openlane/designs/Reformer/src/top.sv:93:10: Cell pin connected by name with empty reference: 'o_max'
+   93 |         .o_max   ( ),
+      |          ^~~~~
+%Warning-PINCONNECTEMPTY: /openlane/designs/Reformer/src/top.sv:103:10: Cell pin connected by name with empty reference: 'o_max'
+  103 |         .o_max   ( ),
+      |          ^~~~~
+%Warning-PINCONNECTEMPTY: /openlane/designs/Reformer/src/top.sv:113:10: Cell pin connected by name with empty reference: 'o_max'
+  113 |         .o_max   ( ),
+      |          ^~~~~

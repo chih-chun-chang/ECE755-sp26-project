@@ -1,0 +1,10 @@
+Warning: Replacing memory \bucket_reg with list of registers. See /openlane/designs/Reformer/src/SortingUnit.sv:85
+ABC: Warning: Detected 2 multi-output gates (for example, "sky130_fd_sc_hd__fa_1").
+Warning: Wire top.\o_valid is used but has no driver.
+Warning: Wire top.\o_index [2] is used but has no driver.
+Warning: Wire top.\o_index [1] is used but has no driver.
+Warning: Wire top.\o_index [0] is used but has no driver.
+Warning: Wire top.\o_bucket [2] is used but has no driver.
+Warning: Wire top.\o_bucket [1] is used but has no driver.
+Warning: Wire top.\o_bucket [0] is used but has no driver.
+Warnings: 8 unique messages, 8 total

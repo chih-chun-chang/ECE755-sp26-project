@@ -1,0 +1,11 @@
+
+63. Executing CHECK pass (checking for obvious problems).
+Checking module top...
+Warning: Wire top.\o_valid is used but has no driver.
+Warning: Wire top.\o_index [2] is used but has no driver.
+Warning: Wire top.\o_index [1] is used but has no driver.
+Warning: Wire top.\o_index [0] is used but has no driver.
+Warning: Wire top.\o_bucket [2] is used but has no driver.
+Warning: Wire top.\o_bucket [1] is used but has no driver.
+Warning: Wire top.\o_bucket [0] is used but has no driver.
+Found and reported 7 problems.

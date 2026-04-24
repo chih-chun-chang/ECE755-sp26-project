@@ -1,0 +1,18 @@
+Design Name: top
+Run Directory: /openlane/designs/Reformer/runs/MS3
+----------------------------------------
+
+Magic DRC Summary:
+Source: /openlane/designs/Reformer/runs/MS3/reports/signoff/drc.rpt
+Total Magic DRC violations is 0
+----------------------------------------
+
+LVS Summary:
+Source: /openlane/designs/Reformer/runs/MS3/logs/signoff/top.lef.lvs.log
+Source not found.
+----------------------------------------
+
+Antenna Summary:
+Source: /openlane/designs/Reformer/runs/MS3/logs/signoff/41-arc.log
+Pin violations: 0
+Net violations: 0

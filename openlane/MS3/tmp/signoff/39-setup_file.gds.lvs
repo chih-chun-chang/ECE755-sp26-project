@@ -1,0 +1,3 @@
+puts "Reading spice netlist file /home/charlie/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/spice/sky130_fd_sc_hd.spice"
+readnet spice /home/charlie/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/spice/sky130_fd_sc_hd.spice 1
+lvs {/openlane/designs/Reformer/runs/MS3/results/signoff/top.gds.spice top} {/openlane/designs/Reformer/runs/MS3/tmp/signoff/36-top.pnl.v top} /home/charlie/.ciel/sky130A/libs.tech/netgen/sky130A_setup.tcl /openlane/designs/Reformer/runs/MS3/logs/signoff/39-top.gds.lvs.log -json

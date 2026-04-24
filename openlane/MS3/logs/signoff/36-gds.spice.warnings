@@ -1,0 +1,9 @@
+Warning: Calma reading is not undoable!  I hope that's OK.
+CIF file read warning: CIF style sky130(): units rescaled by factor of 5 / 1
+CIF file read warning: Input off lambda grid by 2/5; snapped to grid.
+sky130_fd_sc_hd__decap_3: 2 warnings
+sky130_fd_sc_hd__decap_8: 2 warnings
+sky130_ef_sc_hd__decap_12: 2 warnings
+sky130_fd_sc_hd__decap_6: 2 warnings
+sky130_fd_sc_hd__decap_4: 2 warnings
+Total of 10 warnings.
