@@ -33,32 +33,32 @@ ECE755-sp26-project/
 
 - [x] Develop Low-level block diagram/verification.
 - [x] Design LSH Hashing Unit and SPI controller RTL.
-- [ ] Design and verify the SPI interface to external SRAM, random-projection MAC array, and argmax bucketing.
+- [x] Design and verify the SPI interface to random-projection MAC array, and argmax bucketing.
 - [x] Develop unit-level testbenches.
 - [x] Ensure Behavioral model is coded & unit test (1–2 sub-blocks) is complete.
 - [x] Run initial synthesis through LibreLane to validate area feasibility.
-- [ ] Complete Trial synthesis, ensuring the design flow is debugged.
+- [x] Complete Trial synthesis, ensuring the design flow is debugged.
 
 **Weeks 4–5: Core Processing Logic**
 
 - [x] Develop Bucket Sort, Chunk Formation, and Chunked Dot-Product Engine RTL.
 - [x] Implement counting-sort with external SRAM scatter/gather.
 - [x] Build serial MAC for chunked QKT computation with score write-back to external SRAM.
-- [ ] Verify sorting and dot-product correctness against golden model.
+- [x] Verify sorting against golden model.
 
 **Weeks 6–7: Integration & End-to-End Verification**
 
-- [ ] Execute top-level integration and end-to-end verification.
-- [ ] Integrate controller FSM, SPI memory subsystem, full pipeline across both tiles.
-- [ ] Run Cocotb testbench vs. golden model with SPI SRAM behavioral model.
-- [ ] Validate functional correctness across sequence lengths.
+- [x] Execute top-level integration and end-to-end verification.
+- [x] Integrate controller FSM, SPI memory subsystem, full pipeline across both tiles.
+- [x] Run Cocotb testbench vs. golden model with SPI SRAM behavioral model.
+- [x] Validate functional correctness across sequence lengths.
 
 **Weeks 8–9: Hardening & Submission**
 
-- [ ] Perform LibreLane hardening and Tiny Tapeout submission.
-- [ ] Run full LibreLane flow (synthesis, floorplan, placement, CTS, routing, signoff).
-- [ ] Execute RTL, synthesis, place & route, annotation.
-- [ ] Finalize global design: power, clock, routing.**
-- [ ] Fix timing/DRC violations.
-- [ ] Generate GDS for Tiny Tapeout submission.
-- [ ] Collect area, timing, and power data.
+- [x] Perform LibreLane hardening and Tiny Tapeout submission.
+- [x] Run full LibreLane flow (synthesis, floorplan, placement, CTS, routing, signoff).
+- [x] Execute RTL, synthesis, place & route, annotation.
+- [x] Finalize global design: power, clock, routing.**
+- [x] Fix timing/DRC violations.
+- [x] Generate GDS for Tiny Tapeout submission.
+- [x] Collect area, timing, and power data.
